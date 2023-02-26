@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap');
+
+
 *{
     font-family:"Titillium Web";
     margin:0;
@@ -8,6 +10,42 @@ html{
     scroll-behavior: smooth;
 }
 .inicio{
-    background-image: url("/docs/img/fondo.jpg");
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+    url("C:/Users/Marcos/Desktop/AP_TPIntegrador_1/docs/img/fondo.jpg");
     background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+.inicio .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+
+}
+.inicio .contenido-seccion header{
+    padding: 30px;
+}
+.inicio .contenido-seccion header nav{
+    position: fixed;
+    margin-left: 60px;
+    background-color: #940253;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 99 ;
+}
+.inicio .contenido-seccion header nav a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.inicio .contenido-seccion header .logo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "yellowtail";
+    text-shadow: 0 0 35px #fff;
+
 }
