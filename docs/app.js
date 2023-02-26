@@ -53,8 +53,23 @@ function efectoHabilidades(){
     if(distancia_skills>=300 && entro == false){
         entro=true;
         const intervalHtml =setInterval(function(){
-            pintarBarra(javascript,16,0,intervalHtml);
+            pintarBarra(html,16,0,intervalHtml);
         },100);
+        const intervalJS =setInterval(function(){
+            pintarBarra(javascript,11,1,intervalJS);
+        },100);
+        const intervalWordpress =setInterval(function(){
+            pintarBarra(wordpress,11,2,intervalWordpress);
+        },100);        
+        const intervalPhotoshop =setInterval(function(){
+            pintarBarra(photoshop,11,3,intervalPhotoshop);
+        },100);     
+        const intervalPhp =setInterval(function(){
+            pintarBarra(php,11,4,intervalPhp);
+        },100);  
+        const intervalJava =setInterval(function(){
+            pintarBarra(java,11,5,intervalJava);
+        },100);  
     }
 }
 function pintarBarra(id_barra,cantidad,indice,interval){
