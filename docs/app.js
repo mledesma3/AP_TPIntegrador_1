@@ -19,3 +19,56 @@ for(var x = 0; x <links.length;x++){
     menu_visible=false;
     }
 }
+//barras
+function crearBarra(id_barra){
+    for(i=0;i<=16;i++){
+        let div =document.createElement("div");
+        div.className="e";
+        id_barra.appendChild(div);
+    }
+}
+//Seleccionamos barras generales para manipularlas
+let html =document.getElementById("html");
+crearBarra(html);
+let javascript =document.getElementById("javascript");
+crearBarra(javascript);
+let wordpress =document.getElementById("wordpress");
+crearBarra(wordpress);
+let photoshop =document.getElementById("photoshop");
+crearBarra(photoshop);
+let php =document.getElementById("php");
+crearBarra(php);
+let java =document.getElementById("java");
+crearBarra(java);
+
+//Pintar barras
+
+let contadores = [-1,-1,-1,-1,-1,-1];
+let entro = false;
+
+//funcion que aplica las animaciones de barra habilidad
+function efectoHabilidades(){
+    var habilidades=document.getElementById("habilidades");
+    var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    if(distancia_skills>=300 && entro == false){
+        entro=true;
+        const intervalHtml =setInterval(function(){
+            pintarBarra(javascript,16,0,intervalHtml);
+        },100);
+    }
+}
+function pintarBarra(id_barra,cantidad,indice,interval){
+    contadores[indice]++;
+    x=contadores[indice];
+    if(x<cantidad){
+        let elementos = id_barra.getElementsByClassName("e");
+        elementos[x].style.backgroundColor = "#940253";
+    }
+    else{
+        clearInterval(interval)
+    }
+}
+
+window.onscroll = function(){
+    efectoHabilidades();
+}
